@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.janbina.keyboardextension">
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name">
+
+        <service android:name="com.janbina.keyboardextension.KeyboardExtensionService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:canRetrieveWindowContent="true"
+            android:label="@string/app_name"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/keyboard_extension_service_config" />
+        </service>
+    </application>
+</manifest>

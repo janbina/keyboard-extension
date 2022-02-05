@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Keyboard extension</string>
+    <string name="accessibility_service_description">Service that adds some additional options to your keyboard</string>
+</resources>
